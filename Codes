@@ -1,1 +1,46 @@
 //Upload your codes in here!!!
+
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{ int i,b,c=0,j=1,v,x,count;
+for(i=1;i<=100000;i++)
+{  x=i;
+count=0;
+    while(x>0)
+    {x=x/10;
+    count++;
+    }
+    j=i;
+    while(j>0)
+    {
+        b=j%10;
+        v=pow(b,count);
+
+        c=c+v;
+        j=j/10;
+    }
+
+
+    if(c==i)
+    {
+        printf("\n%d",c);
+    }
+
+    c=0;
+}
+return 0;
+}
+/*
+#include<stdio.h>
+#include<math.h>
+int main()
+{ int i,v;
+for(i=1;i<10;i++)
+{ v=pow(i,3);
+   printf("\n%d " ,v);
+}
+return 0;
+}
+*/
